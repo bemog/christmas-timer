@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(/images/santa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  margin-top: 200px;
+  width: 50%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Roboto Mono', sans-serif;
+  color: white;
+  animation: show 1s linear forwards;
+}
+
+.loading {
+  margin-top: 200px;
+}
+
+.counter.hide {
+  display: none;
+}
+
+.time {
+  height: 100%;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+small {
+  font-size: 2rem;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .time {
+    min-width: 150px;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  small {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .counter {
+    width: 300px;
+  }
+
+  .loading {
+    height: 100px;
+  }
+
+  .time {
+    min-width: 50px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  small {
+    font-size: 0.8rem;
+  }
+}
