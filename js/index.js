@@ -23,4 +23,9 @@ const updateCounter = () => {
   secondsEl.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 };
 
+setTimeout(() => {
+  loading.remove();
+  counter.classList.remove('hide');
+}, 1500);
+
 setInterval(updateCounter, 1000);
